@@ -1,0 +1,25 @@
+[
+  {
+    "name": "${service_name}",
+    "image": "${account_number}.dkr.ecr.${region}.amazonaws.com/${service_name}",
+    "cpu": ${tonumber(cpu)},
+    "memory": ${tonumber(memory)},
+    "essential": true,
+    "portMappings": [
+      {
+        "hostPort": ${tonumber(external)},
+        "protocol": "${protocol}",
+        "containerPort": ${tonumber(internal)}
+    }
+    ],
+    "environment" : "${env}",
+    "logConfiguration": {
+      "logDriver": "awslogs",
+      "options": {
+        "awslogs-group": "lg_prod",
+        "awslogs-region": "${region}",
+        "awslogs-stream-prefix": "${log_stream}"
+      }
+    }
+  }
+]
