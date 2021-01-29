@@ -26,6 +26,7 @@ data "template_file" "init" {
     account_number = var.account_number
     cpu = var.cpu
     memory = var.memory
+    branch = var.branch
   }
 }
 

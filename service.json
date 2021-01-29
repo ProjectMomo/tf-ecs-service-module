@@ -1,7 +1,7 @@
 [
   {
     "name": "${service_name}",
-    "image": "${account_number}.dkr.ecr.${region}.amazonaws.com/${service_name}:master",
+    "image": "${account_number}.dkr.ecr.${region}.amazonaws.com/${service_name}:${branch}",
     "cpu": ${tonumber(cpu)},
     "memory": ${tonumber(memory)},
     "essential": true,
