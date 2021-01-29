@@ -29,6 +29,8 @@ data "template_file" "init" {
     service_name = var.service_name
     region = var.region
     account_number = var.account_number
+    cpu = var.cpu
+    memory = var.memory
   }
 }
 
