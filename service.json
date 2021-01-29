@@ -12,7 +12,6 @@
         "containerPort": ${tonumber(internal)}
       }
     ],
-    "environment" : "",
     "logConfiguration": {
       "logDriver": "awslogs",
       "options": {
