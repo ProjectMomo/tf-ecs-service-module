@@ -9,7 +9,7 @@ variable "cpu" {
 variable "memory" {
   default = 256
 }
-variable "account_number" {}
+
 variable "region" {
   default = "sa-east-1"
 }
