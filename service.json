@@ -10,9 +10,9 @@
         "hostPort": ${tonumber(external)},
         "protocol": "${protocol}",
         "containerPort": ${tonumber(internal)}
-    }
+      }
     ],
-    "environment" : "${env}",
+    "environment" : "",
     "logConfiguration": {
       "logDriver": "awslogs",
       "options": {

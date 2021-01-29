@@ -13,11 +13,3 @@ variable "memory" {
 variable "region" {
   default = "sa-east-1"
 }
-
-variable "environment" {
-  type = list(object({
-    name  = string
-    value = string
-  }))
-  default     = []
-}

@@ -1,7 +1,3 @@
-locals {
-  envs = length(var.environment) > 0 ? jsonencode(var.environment) : jsonencode([])
-}
-
 provider "aws" {
   region = var.region
 }
@@ -25,7 +21,6 @@ data "template_file" "init" {
     external = var.external_port
     protocol = var.port_protocol
     log_stream = "ls_${var.service_name}"
-    env = local.envs
     service_name = var.service_name
     region = var.region
     account_number = var.account_number
